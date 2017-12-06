@@ -24,6 +24,8 @@ def shape_tf():
 
     y = tf.square(x)
     print(y.get_shape())  # 返回元组
+    print(y.get_shape()[0].value)  # 返回第0维上的值
+    print(y.get_shape()[1].value)  # 返回第1维上的值
     print(y.get_shape().as_list())  # 返回python list
     # dynamic shape， 运行时获取shape
     print(tf.shape(y))
